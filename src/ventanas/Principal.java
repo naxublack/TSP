@@ -82,12 +82,12 @@ public class Principal extends javax.swing.JFrame {
         jButtonAbrir = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaLog = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
         jButtonRevolver = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaCamino = new javax.swing.JTextArea();
         jButtonHeu = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
@@ -131,14 +131,6 @@ public class Principal extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 370));
 
-        jButton1.setText("PRUEBA");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, -1, -1));
-
         jButtonRevolver.setText("Alg. Constructor");
         jButtonRevolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +156,15 @@ public class Principal extends javax.swing.JFrame {
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tsp wallpaper.png"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
+
+        jButton1.setText("PRUEBA");
+        jButton1.setEnabled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -254,6 +255,7 @@ public class Principal extends javax.swing.JFrame {
           secuencia.set(i, a);
         }
         System.out.println(secuencia);
+        jTextAreaCamino.append("\n"+"La nueva secuencia es: "+secuencia);
         
         //opcion a
         /*
